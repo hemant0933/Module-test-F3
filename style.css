@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+
+  background-color: black;
+  border-bottom: 1px solid white;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+nav .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav .brand a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .nav-items a {
+  margin: 0 1rem;
+}
+main {
+  margin-top: 1.2rem;
+}
+main section {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-direction: column;
+}
+main section .title {
+  margin: 2rem;
+  display: block;
+  font-size: 1.5rem;
+  color: #fff;
+}
+main section .searchbar input {
+  padding: 1rem;
+  margin: 2rem;
+  width: 80%;
+  position: relative;
+  font-size: 1rem;
+}
+#searchbtn {
+  width: 12%;
+  margin: 2rem;
+  border-radius: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.books {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+  margin: 2rem;
+  font-size: 15px;
+  padding: 1rem;
+  color: white;
+}
+.card .book-title {
+  margin-top: 10px;
+  color: white;
+  margin-bottom: 3px;
+}
+.author {
+  margin-bottom: 3px;
+}
+.pagecount {
+  margin-bottom: 3px;
+}
+.publisher {
+  margin-bottom: 3px;
+}
+#buynow {
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+#historybtn{
+  width: 10%;
+  margin: 2rem;
+  border-radius: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+.hide{
+  display: none;
+}
