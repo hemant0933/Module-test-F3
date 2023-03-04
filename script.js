@@ -3,7 +3,7 @@
  let url = "https://www.googleapis.com/books/v1/volumes?q="
    
   var emptyarr = []
-  var books = [];
+  var books;
   function search(){   
   
 
@@ -33,7 +33,7 @@
                  emptyarr.push(obj)
             //  console.log("INSIDE MAP");
             return `<div class="card" id="card">
-                    <img src=${book.volumeInfo.imageLinks.thumbnail}  width="100%" alt="img" srcset="">
+                    <img src=${book.imageLinks.thumbnail}  width="100%" alt="img" srcset="">
                     <div class="book-title" data-header><strong>Title</strong> : ${book.volumeInfo.title}</div>
                     <div class="author" data-author><strong>Author </strong>: ${book.volumeInfo.authors}</div>
                     <div class="pagecount"><strong>Page Count </strong>: ${book.volumeInfo.pageCount}</div>

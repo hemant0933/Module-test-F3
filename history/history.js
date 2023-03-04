@@ -1,20 +1,21 @@
 //  previous search data function
+let rows = document.getElementById("rows");
 function load() {
-  var rows = document.getElementById("rows");
-  var container = document.getElementById("container");
+  rows.innerHTML = ''
   var line;
 //   getting stored data from local storage;
-  var MySearchdata = JSON.parse(localStorage.getItem("emptyarr"));
+  var MySearchdata = JSON.parse(localStorage.getItem("emptyarr"))||[];
     // console.log(MySearchdata);
   if (MySearchdata == null) {
     rows.innerHTML = "No history";
-  } else {
-   
+  } else{
+    
     MySearchdata.map((item) => {
+        let i=0;
       line = `<div id='para'>
-            <div id='searchText'>${item.search}</div> 
+            <div id='searchText'>${i+1}.  ${item.search}</div> 
             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-            <div id='dateTime'> ${item.time}</div>
+            <div id='dateTime'>Search on : ${item.date} at ${item.time}</div>
             </div>`;
     });
     rows.innerHTML = line;
